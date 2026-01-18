@@ -82,8 +82,51 @@ document.addEventListener("DOMContentLoaded", () => {
     const roles = ["Web Developer", "Visual Artist", "Creative Writer"];
     let roleIndex = 0;
     const heroSubtitle = document.querySelector(".hero-subtitle");
-    // Preserve the original html structure
-    const originalSubtitle = heroSubtitle.innerHTML;
+    const originalText = "Web Developer | Visual Artist | Creative Writer"; // Default fallback
+
+    // Wrap the text in a span we can target or just replace the innerHTML content
+    // But since the current HTML has <br> and "Based in Nepal", let's be careful.
+    // Let's assume the user wants the "Web Developer | ..." part to change or just scramble on load.
+    // Actually, "Add animation on the words" usually implies a cycling effect on the roles.
+
+    // Let's structure the subtitle to separate the changing part.
+    if (heroSubtitle) {
+        // Clear initial content to structure it better or just use the whole block
+        // Simpler approach: Scramble the *entire* text content of the first line on load, 
+        // then maybe cycle roles if desired. 
+        // Let's implement a "Hacker Effect" on the 'Abhinav Bhattarai' title instead? 
+        // The user said "animation on the words" and "Certificates".
+        // Let's stick to animating the ROLES cyclically as that's cooler.
+
+        const scrambleText = (el, finalBuffer) => {
+            let iterations = 0;
+            const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!@#$%^&*";
+            const interval = setInterval(() => {
+                el.innerText = finalBuffer
+                    .split("")
+                    .map((letter, index) => {
+                        if (index < iterations) {
+                            return finalBuffer[index];
+                        }
+                        return characters[Math.floor(Math.random() * 26)];
+                    })
+                    .join("");
+
+                if (iterations >= finalBuffer.length) {
+                    clearInterval(interval);
+                }
+
+                iterations += 1 / 3;
+            }, 30);
+        }
+
+        // Apply scramble to the Name first for immediate wow factor
+        const nameBlock = document.querySelector(".gradient-text");
+        if (nameBlock) {
+            // Wait a bit then scramble
+            setTimeout(() => scrambleText(nameBlock, "Abhinav Bhattarai"), 500);
+        }
+    }
 
     // Custom 3D Tilt Effect for Cards
     const cards = document.querySelectorAll(".about-card");
