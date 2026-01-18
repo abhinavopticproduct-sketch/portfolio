@@ -35,6 +35,19 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    // Scroll Animations: Certifications
+    gsap.to(".cert-item", {
+        scrollTrigger: {
+            trigger: ".certifications-section",
+            start: "top 80%"
+        },
+        y: 0,
+        opacity: 1,
+        duration: 0.8,
+        stagger: 0.2,
+        ease: "power2.out"
+    });
+
     // Mobile Menu Logic
     const hamburger = document.querySelector(".hamburger");
     const navLinks = document.querySelector(".nav-links");

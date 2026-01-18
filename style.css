@@ -155,6 +155,13 @@ ul {
     position: relative;
     overflow: hidden;
     text-align: center;
+    background: linear-gradient(rgba(5, 5, 17, 0.4), rgba(5, 5, 17, 0.9)), url('assets/images/profile.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-attachment: scroll;
+    background-color: var(--bg-color);
+    /* Matches theme */
 }
 
 .hero-title {
@@ -385,6 +392,66 @@ h2 {
     outline: none;
     border-color: var(--accent-color);
     background: rgba(255, 255, 255, 0.08);
+}
+
+/* Profile Image */
+/* Profile Image (Background Mode - Removed Container Styles) */
+.hero-visual {
+    position: absolute;
+    /* Revert to absolute to let shapes float over background */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+    display: block;
+    /* Reset flex */
+}
+
+/* Certifications */
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.cert-item {
+    background: var(--card-bg);
+    padding: 1rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+    transition: var(--transition);
+    opacity: 0;
+    /* Hidden initially for GSAP */
+    transform: translateY(50px);
+}
+
+.cert-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-color);
+}
+
+.cert-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    /* Keeps aspect ratio clean */
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    filter: grayscale(20%);
+    /* Artistic touch */
+    transition: var(--transition);
+}
+
+.cert-item:hover img {
+    filter: grayscale(0%);
+}
+
+.cert-item h3 {
+    font-size: 1.2rem;
+    color: #fff;
 }
 
 /* Footer */
