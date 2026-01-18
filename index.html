@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of a BCA Student, Digital Marketer, and Sales Expert.">
+    <title>Abhinav Bhattarai | Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome (for icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">ABHINAV<span class="dot">.</span></div>
+        <ul class="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="block">I am</span>
+                    <span class="block gradient-text">Abhinav Bhattarai</span>
+                </h1>
+                <p class="hero-subtitle">Web Developer | Visual Artist | Creative Writer<br>Based in Nepal</p>
+                <div class="cta-group">
+                    <a href="#contact" class="btn primary-btn">Contact Me</a>
+                    <a href="#projects" class="btn secondary-btn">View My Work</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <!-- Abstract animated shapes -->
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="tag">About Me</span>
+                    <h2> creative & detail-oriented</h2>
+                </div>
+                <div class="about-content-text"
+                    style="text-align: center; max-width: 800px; margin: 0 auto 3rem auto; color: var(--text-secondary); line-height: 1.8; font-size: 1.1rem;">
+                    <p>I am a creative and detail-oriented individual from Nepal with experience in portfolio website
+                        development, digital projects, and visual content creation. I am skilled in building websites
+                        using HTML/CSS and interested in combining technical skills with creative expression.</p>
+                </div>
+                <!-- Highlight Grid -->
+                <div class="about-grid">
+                    <div class="about-card">
+                        <i class="fa-solid fa-code icon"></i>
+                        <h3>Web Development</h3>
+                        <p>Specializing in HTML, CSS, and creating structured, live-preview portfolio websites.</p>
+                    </div>
+                    <div class="about-card">
+                        <i class="fa-solid fa-camera icon"></i>
+                        <h3>Photography</h3>
+                        <p>Cinematic black-and-white fashion photography and visual arts.</p>
+                    </div>
+                    <div class="about-card">
+                        <i class="fa-solid fa-pen-nib icon"></i>
+                        <h3>Creative Writing</h3>
+                        <p>Composing Nepali poems and motivational song lyrics.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects & Skills -->
+        <section id="projects" class="skills-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="tag">My Work</span>
+                    <h2>Projects & Skills</h2>
+                </div>
+
+                <div class="skills-wrapper" style="margin-bottom: 4rem;">
+                    <div class="skill-category">
+                        <h3>Technical Skills</h3>
+                        <div class="skill-bar" data-width="90%">
+                            <span>HTML5 Structure</span>
+                            <div class="bar">
+                                <div class="fill"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar" data-width="85%">
+                            <span>CSS3 Styling</span>
+                            <div class="bar">
+                                <div class="fill"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar" data-width="80%">
+                            <span>Live Server / Dev Tools</span>
+                            <div class="bar">
+                                <div class="fill"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projects List -->
+                <div class="about-grid"> <!-- Reusing grid layout for projects -->
+                    <div class="about-card">
+                        <h3 style="margin-bottom:0.5rem">Portfolio Website</h3>
+                        <p>Developed and structured personal CV/portfolio with live project previews.</p>
+                    </div>
+                    <div class="about-card">
+                        <h3 style="margin-bottom:0.5rem">Fashion Photography</h3>
+                        <p>Cinematic black-and-white fashion photographs and visual storytelling.</p>
+                    </div>
+                    <div class="about-card">
+                        <h3 style="margin-bottom:0.5rem">Nepali Literature</h3>
+                        <p>Collection of Nepali poems and motivational song lyrics.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="tag">Get In Touch</span>
+                    <h2>Start The Conversation</h2>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Project / Inquiry" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn primary-btn">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Abhinav Bhattarai. All Rights Reserved.</p>
+            <div class="socials">
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GSAP Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Main Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
